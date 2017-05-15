@@ -11,11 +11,13 @@ namespace core\params;
 
 class Routes
 {
-    private $params=[
-        "home"=>"index"
+    private $params = [
+        "home" => "home/init",
+        "weather" => "home/weather",
+        ""=>"home/init"
     ];
-    public function __construct()
-    {
+
+    public function getParams(){
         return $this->params;
     }
 }

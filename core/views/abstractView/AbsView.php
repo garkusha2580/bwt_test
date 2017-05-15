@@ -10,5 +10,5 @@ namespace core\views\abstractView\AbsView;
 
 abstract class AbsView
 {
-    abstract function render();
+    abstract function render($data=null);
 }

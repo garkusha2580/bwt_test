@@ -7,6 +7,6 @@
  */
 spl_autoload_register();
 use core\Router,core\params\Routes;
-
 $init = new Router(new Routes());
 $init->start();
+

@@ -12,15 +12,13 @@ use core\views\abstractView\AbsView\AbsView;
 
 class Header extends AbsView
 {
-    private $libPath = dirname(__FILE__);
-    private $libs = [];
-
-    function render()
+    function render($libs=null)
     {
         // TODO: Implement render() method.
+        $this->connectLibs($libs);
     }
 
-    private function connectLibs()
+    private function connectLibs($libs)
     {
 
     }
