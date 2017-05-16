@@ -9,15 +9,22 @@
 namespace core\controllers\AbsController;
 
 
+use core\params\Routes;
+use core\Router;
 use core\views\viewController;
 
 class MomController
 {
-    protected $view;
+    protected $view = null;
 
-    function __construct()
+    public function __construct()
     {
         $this->view = new viewController();
     }
 
+    protected function redirect($data)
+    {
+        $router = new Router(new Routes());
+        $router->start();
+    }
 }

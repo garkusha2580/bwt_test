@@ -9,14 +9,18 @@
 namespace core\controllers;
 
 
-class HomeController
+use core\controllers\AbsController\MomController;
+
+class HomeController extends MomController
 {
-    function __construct()
+    public function __construct()
+    {
+        parent::__construct();
+    }
+
+    public function action_Init()
     {
 
-    }
-    function action_Init(){
-        echo "dddd";
     }
 
 }
