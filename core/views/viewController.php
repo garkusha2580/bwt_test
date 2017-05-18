@@ -14,15 +14,43 @@ class viewController
     private $path;
     private $cssLibs = [];
     private $jsLibs = [];
-    protected $pattern;
+    protected static $pattern;
+    private static $obj = null;
 
-    public function render()
+    protected function home()
+    {
+        self::$pattern = new MainView($this->path);
+
+    }
+
+    protected function weather()
+    {
+        self::$pattern = new WeatherView($this->path);
+
+    }
+
+    private function __construct()
     {
         $this->path = dirname(__FILE__);
-        $this->pattern = new MainView($this->path);
     }
-    public function __construct()
+
+    public static function get()
     {
-        $this->render();
+        if (is_null(self::$obj)) {
+            self::$obj = new self();
+        }
+        return self::$obj;
     }
+
+    public function render($data)
+    {
+        $this->$data();
+    }
+
+    public function __call($name, $arguments)
+    {
+        return false;
+    }
+
+
 }

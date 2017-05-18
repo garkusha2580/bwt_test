@@ -13,18 +13,30 @@ use core\params\Routes;
 use core\Router;
 use core\views\viewController;
 
-class MomController
+abstract class MomController
 {
-    protected $view = null;
-
-    public function __construct()
-    {
-        $this->view = new viewController();
-    }
+   protected static  $view = null;
 
     protected function redirect($data)
     {
         $router = new Router(new Routes());
         $router->start();
+    }
+
+    private function create_View()
+    {
+        return viewController::get();
+    }
+
+    abstract public function init();
+
+    public function __construct()
+    {
+        static::$view = $this->create_View();
+    }
+
+    public function __call($name, $arguments)
+    {
+        return false;
     }
 }

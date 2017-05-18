@@ -12,9 +12,11 @@ namespace core\params;
 class Routes
 {
     private $params = [
-        "home" => "home/init",
-        "weather" => "home/weather",
-        ""=>"home/init"
+        "home" => "HomeController@init",
+        "weather" => "WeatherController@init",
+        "feedback"=>"FeedbackController@init",
+        "register"=>"RegisterController@init",
+        ""=>"HomeController@init"
     ];
 
     public function getParams(){

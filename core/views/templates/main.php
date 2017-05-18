@@ -6,13 +6,12 @@
  * Time: 21:38
  */
 echo <<<html
-<body>
-<div class="container blue standartWidth headerBlock">
+<div class="container">
     <div class="container">
         <div class="col-lg-3">
-            <button class="btn btn-success">some Button</button>
+            <button class="btn btn-group">some Button</button>
         </div>
     </div>
 </div>
-</body>
+
 html;

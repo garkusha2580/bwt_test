@@ -8,19 +8,20 @@
 
 namespace core\controllers;
 
-
+use core\views\viewController;
 use core\controllers\AbsController\MomController;
 
 class HomeController extends MomController
 {
-    public function __construct()
-    {
-        parent::__construct();
-    }
 
-    public function action_Init()
+    public function init()
     {
+        static::$view->render("home");
 
     }
+    public function Data()
+    {
+        static::$view->render("home");
 
+    }
 }
