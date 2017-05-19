@@ -29,6 +29,12 @@ class viewController
 
     }
 
+    protected function register()
+    {
+        self::$pattern = new RegisterView($this->path);
+
+    }
+
     private function __construct()
     {
         $this->path = dirname(__FILE__);

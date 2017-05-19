@@ -17,6 +17,6 @@ class WeatherController extends MomController
     public function init()
     {
         // TODO: Implement action_Init() method.
-        self::$view->render("weather");
+        static::$view->render("weather");
     }
 }

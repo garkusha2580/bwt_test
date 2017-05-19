@@ -1,4 +1,4 @@
 <?php
 echo <<<html
-Ok
+Weather
 html;

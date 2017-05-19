@@ -9,5 +9,5 @@
 namespace core\models\AbsModel;
  abstract class MomModel
 {
-    abstract function Begin();
+    abstract protected function begin(array $data=null);
 }

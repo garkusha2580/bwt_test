@@ -6,12 +6,14 @@
  * Time: 21:38
  */
 echo <<<html
+<div class="jumbotron">
 <div class="container">
-    <div class="container">
-        <div class="col-lg-3">
-            <button class="btn btn-group">some Button</button>
-        </div>
-    </div>
+  <h1>Hello</h1>
+  <p>This is my little app for view weather in Zaporozhye</p>
+  <p>For view your need register</p>
+  <p><a href="register" class="btn btn-primary btn-lg" role="button">Register</a></p>
 </div>
+</div>
+
 
 html;

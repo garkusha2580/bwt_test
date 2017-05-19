@@ -40,26 +40,26 @@ class Router
     {
         $status = 404;
         $uri = $this->uriGetting();
+        $method = strtolower($_SERVER["REQUEST_METHOD"]);
         foreach ($this->routs as $patt => $rout) {
-            if (preg_match("~$patt~",$rout)) {
-                $intRoute = preg_replace("~$patt~", $rout, $uri);
+            if (preg_match("~$patt~", $uri) && ($rout[1] == $method)) {
+                $intRoute = preg_replace("~$patt~", $rout[0], $uri);
                 $segments = explode("@", $intRoute);
-                $controller = array_shift($segments);
-                $action = array_shift($segments);
+                $controller = ucfirst(array_shift($segments));
+                $action = ucfirst(array_shift($segments));
                 $params = $segments;
                 $name = "core\\controllers\\" . $controller;
                 $containerFile = new $name();
                 if (($containerFile instanceof MomController)) {
                     if (method_exists($name, $action)) {
+
                         call_user_func([$name, $action], $params);
                         $status = 200;
                     }
                 }
             }
         }
-        if ($status == 404) {
-            ErrController::err404();
-        }
+        $status == 404 ? ErrController::err404() : null;
         return;
 
     }

@@ -9,7 +9,15 @@
 namespace core\controllers;
 
 
-class RegisterController
-{
+use core\controllers\AbsController\MomController;
 
+class RegisterController extends MomController
+{
+    public function init()
+    {
+        static::$view->render("register");
+    }
+    public function register(){
+
+    }
 }
