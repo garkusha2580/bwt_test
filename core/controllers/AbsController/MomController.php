@@ -15,7 +15,8 @@ use core\views\viewController;
 
 abstract class MomController
 {
-   protected static  $view = null;
+    protected static $view = null;
+    protected static $model = null;
 
     protected function redirect($data)
     {

@@ -10,15 +10,10 @@ use core\models\AbsModel\MomModel;
 
 class AccessModel extends MomModel
 {
-    function register($log,$pass){
 
-    }
-    function enter($log,$pass)
+    protected function begin(array $data = null)
     {
-        // TODO: Implement Begin() method.
+        // TODO: Implement begin() method.
     }
-    protected function begin(array $data=null)
-    {
-        // TODO: Implement Begin() method.
-    }
+
 }

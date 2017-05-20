@@ -10,12 +10,13 @@ namespace core\controllers;
 
 
 use core\controllers\AbsController\MomController;
+use core\models\FeedModel;
 
 class FeedbackController extends MomController
 {
 
     public function init()
     {
-        // TODO: Implement init() method.
+        static::$model = new FeedModel;
     }
 }
