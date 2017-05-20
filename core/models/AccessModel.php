@@ -11,9 +11,9 @@ use core\models\AbsModel\MomModel;
 class AccessModel extends MomModel
 {
 
-    protected function begin(array $data = null)
+    protected function query()
     {
-        // TODO: Implement begin() method.
+        return ["select" => "SELECT id FROM Main WHERE Login=:Login AND Pass=:Pass ",
+            "insert" => "INSERT INTO Main(Login,Pass,created)VALUES (:Login,:Pass,:created)"];
     }
-
 }

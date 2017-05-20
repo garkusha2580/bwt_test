@@ -14,7 +14,7 @@ class Routes
     private $params = [
         "home" => ["HomeController@init","get"],
         "weather" => ["WeatherController@init","get"],
-        "feedback" => ["FeedbackController@init","get"],
+        "feeds" => ["FeedbackController@init","get"],
         "register" => ["RegisterController@init","get"],
         "" => ["HomeController@init","get"]
     ];

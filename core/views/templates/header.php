@@ -33,7 +33,7 @@ echo <<<html
         <span class="glyphicon glyphicon-cloud"></span>
         Weather
 </a></li>
-        <li><a href="#">FeedBack</a></li>
+        <li><a href="feeds">FeedBack</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="register">Register</a></li>

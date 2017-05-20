@@ -12,12 +12,14 @@ namespace core\models;
 
 use core\models\AbsModel\MomModel;
 
-
 class FeedModel extends MomModel
 {
-    protected function begin(array $data = null)
+    static private $get;
+
+    protected function query()
     {
-        // TODO: Implement begin() method.
+        return ["select" => "SELECT * FROM Feeds ORDER BY PublishDate ASC LIMIT 0,5",
+            "insert" => "INSERT INTO Feeds(Title,Body,PublishDate) VALUES(:title,:body,:date)"];
     }
 
 }

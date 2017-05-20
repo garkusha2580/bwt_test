@@ -10,10 +10,13 @@ namespace core\models\AbsModel;
 use core\models\QueryMaster;
  abstract class MomModel
 {
+
     static protected $queryMaster;
-    abstract protected function begin(array $data=null);
-    public function __construct()
-    {
+    public function begin($type,array $params=null){
         static::$queryMaster=QueryMaster::instance();
+        static::$queryMaster->setParams($this->query());
+        return  static::$queryMaster->getQuery($type,$params);
     }
+    abstract protected function query();
+
  }

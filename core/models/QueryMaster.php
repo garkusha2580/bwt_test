@@ -11,13 +11,16 @@ namespace core\models;
 class QueryMaster
 {
     static private $instance;
+    static private $PDO;
+    static private $result;
+    private $params;
 
     private function __construct()
     {
-        $dns = "mysql:bwt=bwt;host=127.0.0.1";
+        $dns = "mysql:dbname=bwt;host=localhost";
         $name = "root";
         $pass = "";
-        self::$instance = new \PDO($dns, $name, $pass);
+        self::$PDO = new \PDO($dns, $name, $pass);
     }
 
     public static function instance()
@@ -25,7 +28,23 @@ class QueryMaster
         if (empty(self::$instance)) {
             self::$instance = new self();
         }
+        self::$result = null;
         return self::$instance;
+    }
+
+    /**
+     * @param mixed $params
+     */
+    public function setParams($params)
+    {
+        $this->params = $params;
+    }
+
+    public function getQuery($type, array $vars = null)
+    {
+        $readyQuery = self::$PDO->prepare($this->params[$type]);
+        $readyQuery->execute($vars);
+        return $readyQuery->fetchAll();
     }
 
 }

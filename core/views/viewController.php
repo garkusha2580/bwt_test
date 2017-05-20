@@ -20,19 +20,21 @@ class viewController
     protected function home()
     {
         self::$pattern = new MainView($this->path);
-
     }
 
     protected function weather()
     {
         self::$pattern = new WeatherView($this->path);
-
     }
 
     protected function register()
     {
         self::$pattern = new RegisterView($this->path);
+    }
 
+    protected function feeds()
+    {
+        self::$pattern = new FeedbackView($this->path);
     }
 
     private function __construct()

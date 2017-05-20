@@ -19,6 +19,7 @@ class HomeController extends MomController
         static::$view->render("home");
 
     }
+
     public function Data()
     {
         static::$view->render("home");

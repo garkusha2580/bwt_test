@@ -17,7 +17,9 @@ class RegisterController extends MomController
     {
         static::$view->render("register");
     }
-    public function register(){
+
+    public function register()
+    {
 
     }
 }

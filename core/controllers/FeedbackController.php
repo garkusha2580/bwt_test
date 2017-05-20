@@ -17,6 +17,9 @@ class FeedbackController extends MomController
 
     public function init()
     {
-        static::$model = new FeedModel;
+        static::$model = new FeedModel();
+        $_POST["feeds"] = static::$model->begin("select");
+        static::$view->render("feeds");
+
     }
 }
