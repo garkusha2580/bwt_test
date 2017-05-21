@@ -41,27 +41,28 @@ class Router
         $status = 404;
         $uri = $this->uriGetting();
         $method = strtolower($_SERVER["REQUEST_METHOD"]);
-        foreach ($this->routs as $patt => $rout) {
-            if (preg_match("~$patt~", $uri) && ($rout[1] == $method)) {
-                $intRoute = preg_replace("~$patt~", $rout[0], $uri);
-                $segments = explode("@", $intRoute);
+        foreach ($this->routs as $pattern => $rout) {
+            if (preg_match("~$pattern~", $uri) && ($rout[1] === $method)) {
+                $intRoute = preg_replace("~$pattern~", $rout[0], $uri);
+                $segments = explode("/", $intRoute);
                 $controller = ucfirst(array_shift($segments));
                 $action = ucfirst(array_shift($segments));
-                $params = $segments;
                 $name = "core\\controllers\\" . $controller;
                 $containerFile = new $name();
+                $params = $segments;
                 if (($containerFile instanceof MomController)) {
                     if (method_exists($name, $action)) {
-
-                        call_user_func([$name, $action], $params);
+                        call_user_func_array([$name, $action], $params);
                         $status = 200;
+                        return;
                     }
                 }
+
             }
         }
         $status == 404 ? ErrController::err404() : null;
         return;
 
-    }
 
+    }
 }

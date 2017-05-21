@@ -14,6 +14,4 @@ echo <<<html
   <p><a href="register" class="btn btn-primary btn-lg" role="button">Register</a></p>
 </div>
 </div>
-
-
 html;

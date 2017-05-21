@@ -37,6 +37,11 @@ class viewController
         self::$pattern = new FeedbackView($this->path);
     }
 
+    protected function singleFeed()
+    {
+        self::$pattern = new singleFeedView($this->path);
+    }
+
     private function __construct()
     {
         $this->path = dirname(__FILE__);

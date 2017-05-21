@@ -18,5 +18,4 @@ use core\models\QueryMaster;
         return  static::$queryMaster->getQuery($type,$params);
     }
     abstract protected function query();
-
  }

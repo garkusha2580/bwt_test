@@ -13,8 +13,8 @@ class FeedbackView
 {
     function __construct($path)
     {
-        require_once $path . "/templates/header.php";
-        require_once $path . "/templates/feeds.php";
-        require_once $path . "/templates/footer.php";
+        require $path . "/templates/header.php";
+        require $path . "/templates/feeds.php";
+        require $path . "/templates/footer.php";
     }
 }

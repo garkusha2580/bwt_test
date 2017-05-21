@@ -19,8 +19,7 @@ foreach ($_POST["feeds"] as $v):
         </div>
         
         <p>${v['Body']}</p>
-        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-      
+        <p><a href="feeds/view/${v['id']}" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
       </div>
     </div>
   </div>

@@ -17,9 +17,9 @@ class QueryMaster
 
     private function __construct()
     {
-        $dns = "mysql:dbname=bwt;host=localhost";
-        $name = "root";
-        $pass = "";
+        $dns = "mysql:dbname=".DBNAME.";host=localhost";
+        $name = LOG;
+        $pass = PASS;
         self::$PDO = new \PDO($dns, $name, $pass);
     }
 
@@ -42,9 +42,11 @@ class QueryMaster
 
     public function getQuery($type, array $vars = null)
     {
+        self::$PDO->setAttribute(\PDO::ATTR_EMULATE_PREPARES, false);
         $readyQuery = self::$PDO->prepare($this->params[$type]);
         $readyQuery->execute($vars);
         return $readyQuery->fetchAll();
+
     }
 
 }
