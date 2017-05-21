@@ -19,6 +19,8 @@ class Routes
         return [
             "weather" => ["WeatherController/init", "get"],
             'feeds/view/([0-9+])' => ['FeedbackController/viewFeed/$1', "get"],
+            'addform'=> ['FeedbackController/showForm', "get"],
+            'adding'=> ['FeedbackController/addFeed', "post"],
             "feeds" => ["FeedbackController/init", "get"],
             "register" => ["RegisterController/init", "get"],
             "home" => ["HomeController/init", "get"],

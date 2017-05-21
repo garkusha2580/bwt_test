@@ -23,10 +23,28 @@ class FeedbackController extends MomController
 
     }
 
-    public function viewFeed($id=null)
+    public function viewFeed($id = null)
     {
         static::$model = new FeedModel();
-        $_POST["feed"]=static::$model->begin("selectAlone",[':id'=>$id]);
+        $_POST["feed"] = static::$model->begin("selectAlone", [':id' => $id]);
         static::$view->render("Singlefeed");
+    }
+
+    public function addFeed()
+    {
+        static::$model = new FeedModel();
+        $_POST["feed"] = static::$model->begin(
+            "insert",
+            [
+                ':title' => $_POST['title'],
+                ":body" => $_POST['body'],
+                ":date" => date("Y-m-d H:i:s"),
+                ":author" => "asdasd asdasdas"]);
+    }
+
+
+    public function showForm()
+    {
+        static::$view->render("form");
     }
 }

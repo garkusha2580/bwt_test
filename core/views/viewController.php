@@ -41,7 +41,10 @@ class viewController
     {
         self::$pattern = new singleFeedView($this->path);
     }
-
+    protected function form()
+    {
+        self::$pattern = new FeedformView($this->path);
+    }
     private function __construct()
     {
         $this->path = dirname(__FILE__);

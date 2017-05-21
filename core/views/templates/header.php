@@ -34,7 +34,7 @@ echo <<<html
         Weather
 </a></li>
         <li><a href="/feeds">FeedBack</a></li>
-            <li><a href="/add">Add Feed</a></li>
+            <li><a href="/addform">Add Feed</a></li>
              <li><a href="/register">Register</a></li>
       </ul>
     

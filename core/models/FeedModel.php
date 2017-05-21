@@ -16,9 +16,12 @@ class FeedModel extends MomModel
 {
     protected function query()
     {
-        return ["select" => 'SELECT * FROM Feeds ORDER BY id DESC LIMIT :preview,:paginate ',
+        return [
+            "select" => 'SELECT * FROM Feeds ORDER BY id DESC LIMIT :preview,:paginate ',
             "insert" => 'INSERT INTO Feeds(Title,Body,PublishDate,Creator) VALUES(:title,:body,:date,:author);',
-            "selectAlone" => 'SELECT * FROM Feeds WHERE id = :id'];
+            "selectAlone" => 'SELECT * FROM Feeds WHERE id = :id',
+            "check" => 'SELECT * FROM Feeds WHERE Title=:title AND Body=:body'];
+
     }
 
 }
