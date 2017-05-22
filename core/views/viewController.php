@@ -11,40 +11,12 @@ namespace core\views;
 
 class viewController
 {
+    protected static $pattern;
+    private static $obj = null;
     private $path;
     private $cssLibs = [];
     private $jsLibs = [];
-    protected static $pattern;
-    private static $obj = null;
 
-    protected function home()
-    {
-        self::$pattern = new MainView($this->path);
-    }
-
-    protected function weather()
-    {
-        self::$pattern = new WeatherView($this->path);
-    }
-
-    protected function register()
-    {
-        self::$pattern = new RegisterView($this->path);
-    }
-
-    protected function feeds()
-    {
-        self::$pattern = new FeedbackView($this->path);
-    }
-
-    protected function singleFeed()
-    {
-        self::$pattern = new singleFeedView($this->path);
-    }
-    protected function form()
-    {
-        self::$pattern = new FeedformView($this->path);
-    }
     private function __construct()
     {
         $this->path = dirname(__FILE__);
@@ -60,13 +32,38 @@ class viewController
 
     public function render($data)
     {
-        $this->$data();
+       $this->$data();
     }
-
     public function __call($name, $arguments)
     {
         return false;
     }
-
-
+    protected function home()
+    {
+        self::$pattern = new MainView($this->path);
+    }
+    protected function weather()
+    {
+        self::$pattern = new WeatherView($this->path);
+    }
+    protected function register()
+    {
+        self::$pattern = new RegisterView($this->path);
+    }
+    protected function feeds()
+    {
+        self::$pattern = new feedsView($this->path);
+    }
+    protected function singleFeed()
+    {
+        self::$pattern = new singleFeedView($this->path);
+    }
+    protected function form()
+    {
+        self::$pattern = new FeedformView($this->path);
+    }
+    protected function authForm()
+    {
+        self::$pattern = new AuthFormView($this->path);
+    }
 }

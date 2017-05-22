@@ -17,7 +17,7 @@ class QueryMaster
 
     private function __construct()
     {
-        $dns = "mysql:dbname=".DBNAME.";host=localhost";
+        $dns = "mysql:dbname=" . DBNAME . ";host=localhost";
         $name = LOG;
         $pass = PASS;
         self::$PDO = new \PDO($dns, $name, $pass);

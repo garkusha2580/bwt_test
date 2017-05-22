@@ -36,6 +36,7 @@ echo <<<html
         <li><a href="/feeds">FeedBack</a></li>
             <li><a href="/addform">Add Feed</a></li>
              <li><a href="/register">Register</a></li>
+             <li><a href="/auth">Log In</a></li>
       </ul>
     
     </div><!-- /.navbar-collapse -->

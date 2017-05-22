@@ -15,83 +15,104 @@
     <schema id="9" parent="1" name="test5.com"/>
     <table id="10" parent="2" name="Feeds"/>
     <table id="11" parent="2" name="Main"/>
-    <column id="12" parent="10" name="id">
+    <table id="12" parent="2" name="sessions"/>
+    <column id="13" parent="10" name="id">
       <Position>1</Position>
       <DataType>int(255) unsigned|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="13" parent="10" name="Title">
+    <column id="14" parent="10" name="Title">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="14" parent="10" name="Body">
+    <column id="15" parent="10" name="Body">
       <Position>3</Position>
       <DataType>varchar(4096)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="15" parent="10" name="PublishDate">
+    <column id="16" parent="10" name="PublishDate">
       <Position>4</Position>
       <DataType>timestamp|0</DataType>
     </column>
-    <column id="16" parent="10" name="Creator">
+    <column id="17" parent="10" name="Creator">
       <Position>5</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="17" parent="10" name="id">
+    <index id="18" parent="10" name="id">
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="18" parent="10" name="PRIMARY">
+    <key id="19" parent="10" name="PRIMARY">
       <ColNames>id
 Creator</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="19" parent="10" name="id">
+    <key id="20" parent="10" name="id">
       <ColNames>id</ColNames>
       <UnderlyingIndexName>id</UnderlyingIndexName>
     </key>
-    <column id="20" parent="11" name="id">
+    <column id="21" parent="11" name="id">
       <Position>1</Position>
       <DataType>int(255) unsigned|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="21" parent="11" name="Login">
+    <column id="22" parent="11" name="Login">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="22" parent="11" name="Pass">
+    <column id="23" parent="11" name="Pass">
+      <Position>4</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="24" parent="11" name="created">
+      <Position>5</Position>
+      <DataType>datetime|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0000-00-00 00:00:00&apos;</DefaultExpression>
+    </column>
+    <column id="25" parent="11" name="email">
       <Position>3</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="23" parent="11" name="created">
-      <Position>4</Position>
-      <DataType>timestamp|0</DataType>
-      <NotNull>1</NotNull>
-      <DefaultExpression>&apos;0000-00-00 00:00:00&apos;</DefaultExpression>
-    </column>
-    <column id="24" parent="11" name="Last_enter">
-      <Position>5</Position>
-      <DataType>timestamp|0</DataType>
-      <NotNull>1</NotNull>
-      <DefaultExpression>&apos;0000-00-00 00:00:00&apos;</DefaultExpression>
-    </column>
-    <index id="25" parent="11" name="Login">
+    <index id="26" parent="11" name="Login">
       <ColNames>Login</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="26" parent="11" name="PRIMARY">
+    <key id="27" parent="11" name="PRIMARY">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="27" parent="11" name="Login">
+    <key id="28" parent="11" name="Login">
       <ColNames>Login</ColNames>
       <UnderlyingIndexName>Login</UnderlyingIndexName>
+    </key>
+    <column id="29" parent="12" name="id">
+      <Position>1</Position>
+      <DataType>int(10) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="30" parent="12" name="sess_hash">
+      <Position>2</Position>
+      <DataType>varchar(1024)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="31" parent="12" name="status">
+      <Position>3</Position>
+      <DataType>tinyint(1)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <key id="32" parent="12" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
     </key>
   </database-model>
 </dataSource>

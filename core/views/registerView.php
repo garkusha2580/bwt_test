@@ -2,19 +2,19 @@
 /**
  * Created by PhpStorm.
  * User: Влад
- * Date: 20.05.2017
- * Time: 20:32
+ * Date: 19.05.2017
+ * Time: 17:11
  */
 
 namespace core\views;
 
 
-class FeedbackView
+class registerView
 {
     function __construct($path)
     {
-        require $path . "/templates/header.php";
-        require $path . "/templates/feeds.php";
+        require $path."/templates/header.php" ;
+        require $path . "/templates/regform.php";
         require $path . "/templates/footer.php";
     }
 }

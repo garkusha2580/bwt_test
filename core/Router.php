@@ -9,9 +9,7 @@
 namespace core;
 
 
-use core\controllers\AbsController\MomController;
-use core\controllers\ErrController;
-use core\params\Routes;
+use core\controllers\AbsController\MomController, core\controllers\ErrController, core\params\Routes;
 
 class Router
 {
@@ -21,19 +19,6 @@ class Router
     public function __construct(Routes $data)
     {
         $this->routs = $data->getParams();
-    }
-
-    private function uriGetting()
-    {
-        if (!empty($_SERVER["REQUEST_URI"])) {
-            return trim($_SERVER["REQUEST_URI"], '/');
-        }
-        if (!empty($_SERVER["PATH_INFO"])) {
-            return trim($_SERVER["PATH_INFO"], '/');
-        }
-        if (!empty($_SERVER["QUERY_STRING"])) {
-            return trim($_SERVER["QUERY_STRING"], '/');
-        }
     }
 
     public function start()
@@ -64,5 +49,18 @@ class Router
         return;
 
 
+    }
+
+    private function uriGetting()
+    {
+        if (!empty($_SERVER["REQUEST_URI"])) {
+            return trim($_SERVER["REQUEST_URI"], '/');
+        }
+        if (!empty($_SERVER["PATH_INFO"])) {
+            return trim($_SERVER["PATH_INFO"], '/');
+        }
+        if (!empty($_SERVER["QUERY_STRING"])) {
+            return trim($_SERVER["QUERY_STRING"], '/');
+        }
     }
 }

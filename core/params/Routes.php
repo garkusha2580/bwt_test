@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Влад
- * Date: 15.05.2017
- * Time: 19:55
- */
 
 namespace core\params;
 
@@ -12,19 +6,21 @@ namespace core\params;
 class Routes
 {
 
+    private $ways = [
+        "weather" => ["WeatherController/init", "get"],
+        'feeds/view/([0-9+])' => ['FeedbackController/viewFeed/$1', "get"],
+        'addform' => ['FeedbackController/showForm', "get"],
+        'adding' => ['FeedbackController/addFeed', "post"],
+        "feeds" => ["FeedbackController/init", "get"],
+        "auth" => ["RegisterController/auth", "get"],
+        "register" => ["RegisterController/init", "get"],
+        "register/begin" => ["RegisterController/register", "post"],
+        "home" => ["HomeController/init", "get"],
+        "" => ["HomeController/init", "get"],
+    ];
 
     public function getParams()
     {
-
-        return [
-            "weather" => ["WeatherController/init", "get"],
-            'feeds/view/([0-9+])' => ['FeedbackController/viewFeed/$1', "get"],
-            'addform'=> ['FeedbackController/showForm', "get"],
-            'adding'=> ['FeedbackController/addFeed', "post"],
-            "feeds" => ["FeedbackController/init", "get"],
-            "register" => ["RegisterController/init", "get"],
-            "home" => ["HomeController/init", "get"],
-            "" => ["HomeController/init", "get"],
-        ];
+        return $this->ways;
     }
 }
