@@ -1,0 +1,7 @@
+{
+    "name": "vendor/microframe",
+    "require": {
+        "guzzlehttp/guzzle": "^6.2",
+        "sunra/php-simple-html-dom-parser": "v1.5.*"
+    }
+}
