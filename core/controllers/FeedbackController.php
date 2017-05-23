@@ -10,6 +10,7 @@ namespace core\controllers;
 
 
 use core\controllers\AbsController\MomController;
+use core\controllers\middleware\AccessChecker;
 use core\models\FeedModel;
 
 class FeedbackController extends MomController
@@ -17,6 +18,7 @@ class FeedbackController extends MomController
 
     public function init()
     {
+        AccessChecker::auth();
         static::$model = new FeedModel();
         $_POST["feeds"] = static::$model->begin("select", [':preview' => 0, ':paginate' => 5]);
         static::$view->render("feeds");
@@ -25,6 +27,7 @@ class FeedbackController extends MomController
 
     public function viewFeed($id = null)
     {
+        AccessChecker::auth();
         static::$model = new FeedModel();
         $_POST["feed"] = static::$model->begin("selectAlone", [':id' => $id]);
         static::$view->render("Singlefeed");
@@ -32,6 +35,7 @@ class FeedbackController extends MomController
 
     public function addFeed()
     {
+        AccessChecker::auth();
         static::$model = new FeedModel();
         $_POST["feed"] = static::$model->begin(
             "insert",
@@ -45,6 +49,7 @@ class FeedbackController extends MomController
 
     public function showForm()
     {
+        AccessChecker::auth();
         static::$view->render("form");
     }
 }

@@ -29,6 +29,8 @@ class ErrController
     }
     public  static function locate(){
         header("Location:".$_SERVER["PHP_SELF"]);
-
+    }
+    public static function authLocate(){
+        header("Location:/auth");
     }
 }

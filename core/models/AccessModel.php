@@ -17,9 +17,12 @@ class AccessModel extends MomModel
     protected function query()
     {
         return ["select" => "SELECT id FROM Main WHERE Login=:Login AND Pass=:Pass ",
-            "insert" => "INSERT INTO Main(Login,Email,Pass,created) VALUES (:Login,:Pass,:created,:email)",
-            "selectSess" => "SELECT * FROM sessions WHERE sess_hash=:hash AND status=FALSE ",
-            "insertSess" => "UPDATE sessions SET  status=TRUE WHERE sess_hash=:hash",
-            "endSess" => "UPDATE sessions SET  status=FALSE WHERE sess_hash=:hash"];
+            "insert" => "INSERT INTO Main(Login,Pass,created,email) VALUES (:Login,:Pass,:created,:email)",
+            "selectSess" => "SELECT id FROM sessions WHERE sess_hash=:hash AND status=:status",
+            "viewSess" => "SELECT status FROM sessions WHERE sess_hash=:hash",
+            "updateSess" => "UPDATE sessions SET status=:status WHERE sess_hash=:hash",
+            "insertSess" => "INSERT INTO sessions(sess_hash,status) VALUES(:hash,:status)",
+            "endSess" => "UPDATE sessions SET  status=FALSE WHERE sess_hash=:hash",
+            "updateSessById"=>"UPDATE sessions SET  status=FALSE WHERE id=:id"];
     }
 }

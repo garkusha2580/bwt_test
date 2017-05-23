@@ -45,6 +45,7 @@ class QueryMaster
         self::$PDO->setAttribute(\PDO::ATTR_EMULATE_PREPARES, false);
         $readyQuery = self::$PDO->prepare($this->params[$type]);
         $readyQuery->execute($vars);
+        $readyQuery->errorInfo();
         return $readyQuery->fetchAll();
 
     }
