@@ -306,7 +306,7 @@
       <workItem from="1495265855416" duration="23447000" />
       <workItem from="1495318756588" duration="28675000" />
       <workItem from="1495458481978" duration="12704000" />
-      <workItem from="1495537641999" duration="18501000" />
+      <workItem from="1495537641999" duration="18507000" />
     </task>
     <task id="LOCAL-00001" summary="make router&#10;">
       <created>1494877196065</created>
@@ -336,11 +336,18 @@
       <option name="project" value="LOCAL" />
       <updated>1495559387401</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="AuthMiddleware added&#10;&#10;">
+      <created>1495559416094</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1495559416094</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="149378000" />
+    <option name="totallyTimeSpent" value="149384000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
