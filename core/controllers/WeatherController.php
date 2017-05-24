@@ -7,7 +7,9 @@ use core\controllers\StateParser;
 
 class WeatherController extends MomController
 {
-
+    /**
+     * Отрисовка погоды
+     */
     public function init()
     {
         AccessChecker::auth();

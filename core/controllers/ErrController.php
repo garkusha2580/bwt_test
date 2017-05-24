@@ -8,6 +8,9 @@
 
 namespace core\controllers;
 
+/*@class ErrController
+ * Класс всех заголовков-ошибок.
+ */
 
 class ErrController
 {

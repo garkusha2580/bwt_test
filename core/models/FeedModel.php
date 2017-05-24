@@ -12,6 +12,11 @@ namespace core\models;
 
 use core\models\AbsModel\MomModel;
 
+/**
+ * Class FeedModel
+ * @package core\models
+ * Модель поведения для взаимодествий со всеми новостными сущностями
+ */
 class FeedModel extends MomModel
 {
     protected function query()

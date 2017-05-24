@@ -14,12 +14,19 @@ use core\controllers\AbsController\MomController;
 class HomeController extends MomController
 {
 
+    /**
+     * Инициализация стартовой страницы
+     */
     public function init()
     {
         static::$view->render("home");
 
     }
 
+
+    /**
+     * Инициализация стартовой страницы
+     */
     public function Data()
     {
         static::$view->render("home");

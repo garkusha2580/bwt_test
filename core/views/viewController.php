@@ -9,6 +9,15 @@
 namespace core\views;
 
 
+/**
+ * Class viewController
+ * @package core\views
+ * контроллер всех представлений на сайте
+ * синглтон
+ * отдаёт необходимое представлени(там немного не лаконично)
+ * и сами представления
+ */
+
 class viewController
 {
     protected static $pattern;

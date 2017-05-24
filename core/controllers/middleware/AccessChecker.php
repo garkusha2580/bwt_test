@@ -7,7 +7,10 @@
  */
 
 namespace core\controllers\middleware;
-
+/*
+ * Посредник для проверки прав доступа для некоторых страниц
+ * сам доступ делал на куках
+ */
 
 use core\controllers\ErrController;
 use core\models\AccessModel;

@@ -7,6 +7,14 @@
  * Time: 2:00
  */
 namespace core\models;
+/**
+ * Class QueryMaster
+ * @package core\models
+ * Мастер запросов
+ * синглтон
+ * принимает модели всех возможных поведений
+ * и выполняет в сдлчаее обращения к нему конкретному действию
+ */
 
 class QueryMaster
 {
@@ -15,17 +23,17 @@ class QueryMaster
     static private $result;
     private $params;
 
-    private function __construct()
+    private function __construct ()
     {
         $dns = "mysql:dbname=" . DBNAME . ";host=localhost";
         $name = LOG;
         $pass = PASS;
-        self::$PDO = new \PDO($dns, $name, $pass);
+        self::$PDO = new \PDO( $dns , $name , $pass );
     }
 
-    public static function instance()
+    public static function instance ()
     {
-        if (empty(self::$instance)) {
+        if (empty( self::$instance )) {
             self::$instance = new self();
         }
         self::$result = null;
@@ -35,18 +43,18 @@ class QueryMaster
     /**
      * @param mixed $params
      */
-    public function setParams($params)
+    public function setParams ( $params )
     {
         $this->params = $params;
     }
 
-    public function getQuery($type, array $vars = null)
+    public function getQuery ( $type , array $vars = null )
     {
-        self::$PDO->setAttribute(\PDO::ATTR_EMULATE_PREPARES, false);
-        $readyQuery = self::$PDO->prepare($this->params[$type]);
-        $readyQuery->execute($vars);
-        $readyQuery->errorInfo();
-        return $readyQuery->fetchAll();
+        self::$PDO->setAttribute ( \PDO::ATTR_EMULATE_PREPARES , false );
+        $readyQuery = self::$PDO->prepare ( $this->params[$type] );
+        $readyQuery->execute ( $vars );
+        $readyQuery->errorInfo ();
+        return $readyQuery->fetchAll ();
 
     }
 

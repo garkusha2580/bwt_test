@@ -10,6 +10,9 @@ namespace core\controllers;
 
 use Sunra\PhpSimple\HtmlDomParser;
 
+
+//Парсер страницы для погоды
+
 class StateParser
 {
 
