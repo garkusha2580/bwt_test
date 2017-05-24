@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="47cdda8d-c44b-404e-9459-0fb139d3bb36" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/views/libs/js/captchaVerify.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/recaptchalib.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/controllers/FeedbackController.php" afterPath="$PROJECT_DIR$/core/controllers/FeedbackController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/controllers/RegisterController.php" afterPath="$PROJECT_DIR$/core/controllers/RegisterController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/models/AccessModel.php" afterPath="$PROJECT_DIR$/core/models/AccessModel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/params/Routes.php" afterPath="$PROJECT_DIR$/core/params/Routes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/views/libs/js/mainScript.js" afterPath="$PROJECT_DIR$/core/views/libs/js/mainScript.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/views/templates/feedbackform.php" afterPath="$PROJECT_DIR$/core/views/templates/feedbackform.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/defines.php" afterPath="$PROJECT_DIR$/defines.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -375,7 +365,7 @@
       <workItem from="1495458481978" duration="12704000" />
       <workItem from="1495537641999" duration="30177000" />
       <workItem from="1495606543426" duration="1307000" />
-      <workItem from="1495635705883" duration="20443000" />
+      <workItem from="1495635705883" duration="20452000" />
     </task>
     <task id="LOCAL-00001" summary="make router&#10;">
       <created>1494877196065</created>
@@ -440,11 +430,18 @@
       <option name="project" value="LOCAL" />
       <updated>1495647105970</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Pre Finish">
+      <created>1495658193159</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1495658193159</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="182804000" />
+    <option name="totallyTimeSpent" value="182813000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
