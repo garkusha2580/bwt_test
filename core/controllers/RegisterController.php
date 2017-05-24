@@ -23,8 +23,17 @@ class RegisterController extends MomController
     {
         $pass = crypt($_POST["pass"], "CRYPT_SHA256");
         $sessId = crypt($_POST["login"] . $pass, "CRYPT_SHA256");
+
         static::$model = new AccessModel();
-        static::$model->begin("insert", [":Login" => $_POST["login"], ":created" => date("Y-m-d H:i:s"), ":Pass" => $pass, ":email" => $_POST["email"]]);
+        static::$model->begin("insert",
+            [
+                ":Login" => $_POST["login"],
+                ":created" => date("Y-m-d H:i:s"),
+                ":Pass" => $pass,
+                ":email" => $_POST["email"],
+                ":birth" => $_POST["birth"],
+                ":male" => $_POST["male"]]);
+
         static::$model->begin("insertSess", [":hash" => $sessId, ":status" => FALSE]);
         header("Location:/auth");
     }
@@ -49,8 +58,21 @@ class RegisterController extends MomController
         header("Location:/home");
     }
 
-    public function endAuth()
+    public function logout()
     {
-        //TODO: exit from session and rewrite access;
+        if ($_COOKIE['status']) {
+            static::$model->begin("updateSess", [":status" => FALSE, ":hash" => $_COOKIE['status']]);
+            setcookie('status', NULL);
+            header("Location:/home");
+        }
+    }
+
+    public function checkName()
+    {
+        if (isset($_POST["checkName"])) {
+            static::$model = new AccessModel();
+            $status = (bool)static::$model->begin("checkName", [":Login" => $_POST["checkName"]]);
+            echo $status;
+        }
     }
 }

@@ -18,7 +18,7 @@ class FeedModel extends MomModel
     {
         return [
             "select" => 'SELECT * FROM Feeds ORDER BY id DESC LIMIT :preview,:paginate ',
-            "insert" => 'INSERT INTO Feeds(Title,Body,PublishDate,Creator) VALUES(:title,:body,:date,:author);',
+            "insert" => 'INSERT INTO Feeds(Body,PublishDate,Creator,email) VALUES(:body,:date,:author,:email);',
             "selectAlone" => 'SELECT * FROM Feeds WHERE id = :id',
             "check" => 'SELECT * FROM Feeds WHERE Title=:title AND Body=:body'];
 

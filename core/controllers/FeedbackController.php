@@ -35,21 +35,19 @@ class FeedbackController extends MomController
 
     public function addFeed()
     {
-        AccessChecker::auth();
         static::$model = new FeedModel();
         $_POST["feed"] = static::$model->begin(
             "insert",
             [
-                ':title' => $_POST['title'],
                 ":body" => $_POST['body'],
                 ":date" => date("Y-m-d H:i:s"),
-                ":author" => "asdasd asdasdas"]);
+                ":author" => $_POST['name'],
+                ":email" => $_POST['email']]);
     }
 
 
     public function showForm()
     {
-        AccessChecker::auth();
         static::$view->render("form");
     }
 }

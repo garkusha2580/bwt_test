@@ -1,4 +1,5 @@
 <?php
+$logout = isset($_COOKIE['status'])?"<li class='right'><a href='\logout'>Logout</a></li>":"";
 echo <<<html
 <!doctype html>
 <html lang="ru">
@@ -9,9 +10,12 @@ echo <<<html
 <title>Document</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript" src=${ROOT}"/core/views/libs/js/bootstrap.min.js"></script>
+<script type="text/javascript" src=${ROOT}"/core/views/libs/js/jquery-ui-1.9.2.custom.min.js"></script>
+<script type="text/javascript" src=${ROOT}"/core/views/libs/js/mainScript.js"></script>
 <link rel="stylesheet" href=${ROOT}"/core/views/libs/css/style.css">
 
 <link rel="stylesheet" href=${ROOT}"/core/views/libs/css/bootstrap.min.css">
+<link rel="stylesheet" href=${ROOT}"/core/views/libs/css/jquery-ui-1.9.2.custom.min.css">
 </head>
 <body>
 <nav class="navbar navbar-default" role="navigation">
@@ -37,6 +41,7 @@ echo <<<html
             <li><a href="/addform">Add Feed</a></li>
              <li><a href="/register">Register</a></li>
              <li><a href="/auth">Log In</a></li>
+             ${logout}
       </ul>
     
     </div><!-- /.navbar-collapse -->

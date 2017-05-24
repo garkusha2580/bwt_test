@@ -34,11 +34,6 @@
   height: auto;
   padding: auto;
 }
-//input,textarea{
-//  &:invalid{
-//    border-color: #d9534f;
-//  }
-//  &:valid{
-//    border-color: #5cb85c;
-//  }
-//}
+#errName{
+  display: none;
+}

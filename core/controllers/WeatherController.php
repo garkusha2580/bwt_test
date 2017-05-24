@@ -12,8 +12,7 @@ class WeatherController extends MomController
     {
         AccessChecker::auth();
          $data = array();
-        $data = StateParser::data($data);
-        var_dump($data);
+        $_POST["weatherData"] = StateParser::data($_POST["weatherData"]);
         static::$view->render("weather");
 
 

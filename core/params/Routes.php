@@ -15,7 +15,9 @@ class Routes
         "setAuth" => ["RegisterController/setAuth", "post"],
         "register" => ["RegisterController/init", "get"],
         "register/begin" => ["RegisterController/register", "post"],
+        "logout" => ["RegisterController/logout", "get"],
         "home" => ["HomeController/init", "get"],
+        "checkName" => ["RegisterController/checkName", "post"],
         "" => ["HomeController/init", "get"],
     ];
 
