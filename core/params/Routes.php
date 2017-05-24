@@ -17,7 +17,7 @@ class Routes
         "register/begin" => ["RegisterController/register", "post"],
         "logout" => ["RegisterController/logout", "get"],
         "home" => ["HomeController/init", "get"],
-        "checkName" => ["RegisterController/checkName", "post"],
+        "verify" => ["RegisterController/captchaVerify", "post"],
         "" => ["HomeController/init", "get"],
     ];
 

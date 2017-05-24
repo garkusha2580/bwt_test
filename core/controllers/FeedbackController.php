@@ -12,6 +12,7 @@ namespace core\controllers;
 use core\controllers\AbsController\MomController;
 use core\controllers\middleware\AccessChecker;
 use core\models\FeedModel;
+use ReCaptcha;
 
 class FeedbackController extends MomController
 {
@@ -35,14 +36,28 @@ class FeedbackController extends MomController
 
     public function addFeed()
     {
+        $status = FeedbackController::captchaChecker();
+        if (!$status->success) {
+            header("Location:/addform");
+            return;
+        }
         static::$model = new FeedModel();
-        $_POST["feed"] = static::$model->begin(
+        static::$model->begin(
             "insert",
             [
                 ":body" => $_POST['body'],
                 ":date" => date("Y-m-d H:i:s"),
                 ":author" => $_POST['name'],
                 ":email" => $_POST['email']]);
+        header("Location:/feeds");
+    }
+
+    public static function captchaChecker()
+    {
+        $url = "https://www.google.com/recaptcha/api/siteverify";
+        $query = $url . "?secret=" . SECRET_CAPTCHA . "&response=" . $_POST['g-recaptcha-response'] . "&remoteip=" . $_SERVER["REMOTE_ADDR"];
+        $data = json_decode(file_get_contents($query));
+        return $data;
     }
 
 

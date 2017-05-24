@@ -16,7 +16,8 @@ class AccessModel extends MomModel
 
     protected function query()
     {
-        return ["select" => "SELECT id FROM Main WHERE Login=:Login AND Pass=:Pass ",
+        return [
+            "select" => "SELECT id FROM Main WHERE Login=:Login AND Pass=:Pass ",
             "insert" => "INSERT INTO Main(Login,Pass,Created,Email,Birth,Male) VALUES (:Login,:Pass,:created,:email,:birth,:male)",
             "selectSess" => "SELECT id FROM sessions WHERE sess_hash=:hash AND status=:status",
             "viewSess" => "SELECT status FROM sessions WHERE sess_hash=:hash",

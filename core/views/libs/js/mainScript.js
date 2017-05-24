@@ -7,9 +7,9 @@ $("document").ready(function () {
         monthNamesShort: ["Янв", "Фев", "Мар", "Апр", "Май", "Июн", "Июл", "Авг", "Сен", "Окт", "Ноя", "Дек"],
         dayNames: ["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресение"],
         dayNamesMin: ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"],
-
         changeMonth: true,
-        changeYear: true
+        changeYear: true,
+        dateFormat:"yy-mm-dd"
     });
     $('#Login').keyup(function () {
         var val = $(this).val();

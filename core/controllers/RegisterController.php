@@ -61,18 +61,12 @@ class RegisterController extends MomController
     public function logout()
     {
         if ($_COOKIE['status']) {
+            static::$model = new AccessModel();
             static::$model->begin("updateSess", [":status" => FALSE, ":hash" => $_COOKIE['status']]);
             setcookie('status', NULL);
             header("Location:/home");
         }
     }
 
-    public function checkName()
-    {
-        if (isset($_POST["checkName"])) {
-            static::$model = new AccessModel();
-            $status = (bool)static::$model->begin("checkName", [":Login" => $_POST["checkName"]]);
-            echo $status;
-        }
-    }
+
 }
