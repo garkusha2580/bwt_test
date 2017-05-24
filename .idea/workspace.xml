@@ -2,27 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="47cdda8d-c44b-404e-9459-0fb139d3bb36" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/views/libs/css/jquery-ui-1.9.2.custom.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/views/libs/js/jquery-ui-1.9.2.custom.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/views/libs/js/mainScript.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/679c3214-35a7-4a0e-ac99-b48e3b13352a.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/679c3214-35a7-4a0e-ac99-b48e3b13352a.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/study.com.iml" afterPath="$PROJECT_DIR$/.idea/study.com.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/controllers/FeedbackController.php" afterPath="$PROJECT_DIR$/core/controllers/FeedbackController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/controllers/RegisterController.php" afterPath="$PROJECT_DIR$/core/controllers/RegisterController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/controllers/StateParser.php" afterPath="$PROJECT_DIR$/core/controllers/StateParser.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/controllers/WeatherController.php" afterPath="$PROJECT_DIR$/core/controllers/WeatherController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/models/AccessModel.php" afterPath="$PROJECT_DIR$/core/models/AccessModel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/models/FeedModel.php" afterPath="$PROJECT_DIR$/core/models/FeedModel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/params/Routes.php" afterPath="$PROJECT_DIR$/core/params/Routes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/views/libs/css/style.css" afterPath="$PROJECT_DIR$/core/views/libs/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/views/libs/css/style.css.map" afterPath="$PROJECT_DIR$/core/views/libs/css/style.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/views/libs/css/style.scss" afterPath="$PROJECT_DIR$/core/views/libs/css/style.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/views/templates/feedbackform.php" afterPath="$PROJECT_DIR$/core/views/templates/feedbackform.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/views/templates/header.php" afterPath="$PROJECT_DIR$/core/views/templates/header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/views/templates/main.php" afterPath="$PROJECT_DIR$/core/views/templates/main.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/views/templates/regform.php" afterPath="$PROJECT_DIR$/core/views/templates/regform.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/views/templates/weather.php" afterPath="$PROJECT_DIR$/core/views/templates/weather.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -387,7 +367,7 @@
       <workItem from="1495458481978" duration="12704000" />
       <workItem from="1495537641999" duration="30177000" />
       <workItem from="1495606543426" duration="1307000" />
-      <workItem from="1495635705883" duration="11333000" />
+      <workItem from="1495635705883" duration="11364000" />
     </task>
     <task id="LOCAL-00001" summary="make router&#10;">
       <created>1494877196065</created>
@@ -438,11 +418,18 @@
       <option name="project" value="LOCAL" />
       <updated>1495572461468</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Pre Finish">
+      <created>1495647090890</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1495647090890</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="173694000" />
+    <option name="totallyTimeSpent" value="173725000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -457,11 +444,11 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18986385" sideWeight="0.5859247" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18986385" sideWeight="0.5859247" order="2" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.49394855" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5060514" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2397882" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5040917" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5040917" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2344932" sideWeight="0.4140753" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.49394855" order="8" side_tool="false" content_ui="tabs" />
@@ -505,7 +492,8 @@
     <MESSAGE value="add views and new controller&#10;&#10;" />
     <MESSAGE value="AuthMiddleware added&#10;&#10;" />
     <MESSAGE value="Parser added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Parser added" />
+    <MESSAGE value="Pre Finish" />
+    <option name="LAST_COMMIT_MESSAGE" value="Pre Finish" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
